@@ -18,8 +18,8 @@ Tipo **2**: GitHub is the primary (issues, PRs, wiki). Forgejo is a **pull-mirro
 - [ ] Forgejo pull-mirror configured (`8h`, wiki on) — **do on LAN**
 - [x] Local remote `github` set
 - [ ] Local remote `forgejo` (after mirror exists)
-- [ ] Branch protection on `main` (PR reviews required count 0; force-push off)
-- [ ] Labels + milestones + issue templates (apply via `gh` after first curriculum push)
+- [x] Branch protection on `main` (PR reviews required count 0; force-push off)
+- [x] Labels + milestones + issue templates
 
 ## Labels
 
