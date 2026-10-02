@@ -1,0 +1,46 @@
+{
+  "name": "domain-driven-design-tech-challenge",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit",
+    "test": "vitest run",
+    "test:starters": "vitest run --config vitest.starters.config.ts",
+    "lint": "oxlint .",
+    "generate:events": "node scripts/generate-service-events.mjs --count 500 --out data/service-events.csv"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/react-router": "^1.131.27",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.13",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "@tanstack/router-plugin": "^1.131.27",
+    "@types/node": "^22.18.6",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~5.9.2",
+    "vite": "^8.3.0",
+    "vitest": "^3.2.4"
+  }
+}

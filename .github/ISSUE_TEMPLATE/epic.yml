@@ -1,0 +1,33 @@
+name: Epic
+description: Parent tracker for a milestone — no single branch/PR for the whole epic
+title: "chore(c-mN): "
+labels: ["type:epic", "status:needs-review"]
+body:
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone
+      placeholder: C-M2
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal / deliverable
+    validations:
+      required: true
+  - type: textarea
+    id: children
+    attributes:
+      label: Child [UPDATE] checklist
+      description: List hijas as they are created. Do not open one PR for the entire epic.
+      value: |
+        - [ ] …
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+  - type: markdown
+    attributes:
+      value: |
+        Epics **do not** require a PR. Only `[UPDATE]` children do (branch → PR → merge).

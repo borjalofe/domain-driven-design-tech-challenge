@@ -1,0 +1,29 @@
+name: Bug
+description: Something broken in the workshop app or curriculum
+title: "[bug] "
+labels: ["type:task", "status:needs-review", "category:chore"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone (if known)

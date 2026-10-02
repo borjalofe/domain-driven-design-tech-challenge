@@ -1,0 +1,63 @@
+name: Task
+description: Atomic [UPDATE] — one PR in one sitting
+title: "[UPDATE] "
+labels: ["type:task", "status:needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use for implementation slices. Epics do not use this template for a single mega-branch.
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone
+      placeholder: C-M2
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - infra
+        - docs
+        - feature
+        - chore
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference
+      placeholder: "Blocked by: #n"
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+  - type: markdown
+    attributes:
+      value: |
+        ## Workflow
+        `needs-review` → `approved` → create branch → START WORK → PR → merge → END WORK
